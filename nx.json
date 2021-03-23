@@ -1,8 +1,4 @@
 {
-  "npmScope": "react-workspace-applications-nx",
-  "affected": {
-    "defaultBase": "master"
-  },
   "implicitDependencies": {
     "workspace.json": "*",
     "package.json": {
@@ -14,18 +10,25 @@
     ".eslintrc.json": "*",
     "nx.json": "*"
   },
+  "affected": {
+    "defaultBase": "master"
+  },
+  "npmScope": "react-workspace-applications-nx",
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ]
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
       }
     }
   },
-  "projects": {}
+  "projects": {
+    "list-of-task-basic": {
+      "tags": []
+    },
+    "list-of-task-basic-e2e": {
+      "tags": [],
+      "implicitDependencies": ["list-of-task-basic"]
+    }
+  }
 }
