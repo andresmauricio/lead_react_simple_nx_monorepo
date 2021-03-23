@@ -23,7 +23,8 @@
     "update": "nx migrate latest",
     "workspace-generator": "nx workspace-generator",
     "dep-graph": "nx dep-graph",
-    "help": "nx help"
+    "help": "nx help",
+    "start-react-basic-list-task": "nx serve list-of-task-basic"
   },
   "private": true,
   "dependencies": {
