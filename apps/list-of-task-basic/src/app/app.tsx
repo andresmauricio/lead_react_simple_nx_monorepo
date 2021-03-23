@@ -20,6 +20,8 @@ export default function App() {
 const Container = styled.div`
   padding: 20px;
   display: flex;
+  align-items: flex-start;
+  gap: 20px;
   /* width: 50%; */
   /* margin: 20px auto; */
 `;

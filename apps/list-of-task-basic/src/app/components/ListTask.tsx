@@ -47,7 +47,7 @@ export default function ListTask() {
 };
 
 const GridTask = styled.div`
-  flex:2;
+  flex: 3;
   flex-wrap: wrap;
   display: flex;
 `
