@@ -6,8 +6,9 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
   }
   body, html {
-    font-family: sans-serif;
+    font-family: 'Nunito', sans-serif;
     max-width: 100%;
+    background-color: #E6E7EB;
   }
 `;
 

@@ -5,8 +5,9 @@ export default function Task({ props }) {
   const { name, priority, description, status } = props;
   return (
     <Article>
-      <Title>{name}</Title>
       <Badget>{priority}</Badget>
+      <Hr />
+      <Title>{name}</Title>
       <Description>{description}</Description>
       <p>{status}</p>
     </Article>
@@ -15,32 +16,34 @@ export default function Task({ props }) {
 
 const Article = styled.article`
   width: 200px;
-  height: auto;
+  border: 1px solid #f3f4ed;
+  background-color: #fff;
   padding: 20px 8px;
   display: flex;
   flex-direction: column;
-  text-align: center;
-  margin-bottom: 10px;
   margin-top: 10px;
   margin-left: 10px;
-  background-color: #f3f4ed;
-  box-shadow: 7px 7px 3px 0px rgba(0, 0, 0, 0.5);
 `;
 
 const Title = styled.header`
   font-weight: bold;
   font-size: 14px;
-  text-transform: uppercase;
+  margin-top: 15px;
+  margin-bottom: 10px;
 `;
 
 const Badget = styled.span`
-  background-color: #c06014;
-  margin: 5px auto;
-  width: 30%;
-  font-size: 11px;
-  color: #f3f4ed;
-  border-radius: 7px;
-  padding: 2px;
+  font-size: 10px;
+  font-weight: 300;
+  color: #333;
+  text-align: right;
+  margin-bottom: 15px;
+`;
+
+const Hr = styled.div`
+  height: 1px;
+  width: 100%;
+  background-color: #babbb6;
 `;
 
 const Description = styled.p`
