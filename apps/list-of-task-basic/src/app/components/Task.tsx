@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import error from '../../assets/close.png'
+import success from '../../assets/tick.png'
 
 export default function Task({ props }) {
   const { name, priority, description, status } = props;
