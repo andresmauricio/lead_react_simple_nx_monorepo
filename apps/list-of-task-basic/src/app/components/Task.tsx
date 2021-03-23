@@ -27,7 +27,7 @@ const Article = styled.article`
   display: flex;
   flex-direction: column;
   margin-top: 10px;
-  margin-left: 10px;
+  margin-right: 10px;
 `;
 
 const Title = styled.header`

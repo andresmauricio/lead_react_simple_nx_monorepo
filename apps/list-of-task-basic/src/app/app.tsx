@@ -1,21 +1,25 @@
-import React from 'react';
-
+import React, { Fragment } from 'react';
 import styled from 'styled-components';
+
 import Form from './components/Form';
 import ListTask from './components/ListTask';
-
 import Navabar from './components/Navbar';
 
-const Main = styled.div``;
-
-export function App() {
+export default function App() {
   return (
-    <Main>
+    <Fragment>
       <Navabar />
-      <Form />
-      <ListTask />
-    </Main>
+      <Container>
+        <Form />
+        <ListTask />
+      </Container>
+    </Fragment>
   );
 }
 
-export default App;
+const Container = styled.div`
+  padding: 20px;
+  display: flex;
+  /* width: 50%; */
+  /* margin: 20px auto; */
+`;

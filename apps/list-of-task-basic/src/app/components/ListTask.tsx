@@ -23,6 +23,18 @@ export default function ListTask() {
       priority: 'Higth',
       description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
       status: true
+    },
+    {
+      name: 'Deploy Proyect',
+      priority: 'Higth',
+      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
+      status: true
+    },
+    {
+      name: 'Deploy Proyect',
+      priority: 'Higth',
+      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
+      status: true
     }
   ]
   return (
@@ -35,5 +47,7 @@ export default function ListTask() {
 };
 
 const GridTask = styled.div`
+  flex:2;
+  flex-wrap: wrap;
   display: flex;
 `
