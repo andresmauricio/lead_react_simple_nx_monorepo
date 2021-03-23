@@ -1,17 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
-import error from '../../assets/close.png'
-import success from '../../assets/tick.png'
+import error from '../../assets/close.png';
+import success from '../../assets/tick.png';
 
 export default function Task({ props }) {
   const { name, priority, description, status } = props;
+  const icon = status ? success : error;
   return (
     <Article>
-      <Badget>{priority}</Badget>
+      <Container>
+        <img src={icon} width="30px" />
+        <Badget>{priority}</Badget>
+      </Container>
       <Hr />
       <Title>{name}</Title>
       <Description>{description}</Description>
-      <p>{status}</p>
     </Article>
   );
 }
@@ -39,7 +42,6 @@ const Badget = styled.span`
   font-weight: 300;
   color: #333;
   text-align: right;
-  margin-bottom: 15px;
 `;
 
 const Hr = styled.div`
@@ -51,4 +53,11 @@ const Hr = styled.div`
 const Description = styled.p`
   text-align: justify;
   font-size: 10px;
+`;
+
+const Container = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
 `;
