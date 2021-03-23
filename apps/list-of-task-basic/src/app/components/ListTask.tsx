@@ -1,6 +1,8 @@
 import React from 'react';
 import Task from './Task';
 import { Fragment } from 'react';
+import styled from 'styled-components';
+
 
 export default function ListTask() {
   const tasks = [
@@ -24,10 +26,14 @@ export default function ListTask() {
     }
   ]
   return (
-    <Fragment>
+    <GridTask>
       {
         tasks.map((task) => <Task props={task} key={task.name} />)
       }
-    </Fragment>
+    </GridTask>
   );
 };
+
+const GridTask = styled.div`
+  display: flex;
+`
