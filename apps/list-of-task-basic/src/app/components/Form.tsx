@@ -4,6 +4,7 @@ import styled from 'styled-components';
 export default function Form() {
   return (
     <FormContainer>
+      <Title>Add Task</Title>
       <Input type="text" autoComplete="off" placeholder="Title" name="title" />
       <Input
         type="text"
@@ -22,7 +23,7 @@ export default function Form() {
   );
 }
 const FormContainer = styled.form`
-flex: 1;
+  flex: 1;
   display: flex;
   flex-direction: column;
   width: 250px;
@@ -53,4 +54,9 @@ const Button = styled.button`
   cursor: pointer;
   background-color: #424642;
   color: #f3f4ed;
+`;
+
+const Title = styled.h2`
+  margin-bottom: 15px;
+  text-align: center;
 `;

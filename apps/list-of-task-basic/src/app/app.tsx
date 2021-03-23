@@ -22,6 +22,4 @@ const Container = styled.div`
   display: flex;
   align-items: flex-start;
   gap: 20px;
-  /* width: 50%; */
-  /* margin: 20px auto; */
 `;
