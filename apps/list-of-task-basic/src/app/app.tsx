@@ -4,13 +4,13 @@ import styled from 'styled-components';
 
 import Navabar from './components/Navbar';
 
-const StyledApp = styled.div``;
+const Main = styled.div``;
 
 export function App() {
   return (
-    <StyledApp>
+    <Main>
       <Navabar />
-    </StyledApp>
+    </Main>
   );
 }
 
