@@ -17,7 +17,7 @@ export default function App() {
       <Navabar />
       <Container>
         <Form addTask={addTask} />
-        <ListTask />
+        <ListTask listOfTasks={tasks} />
       </Container>
     </Fragment>
   );
