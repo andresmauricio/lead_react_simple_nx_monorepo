@@ -6,6 +6,7 @@ export default function Form({ addTask }) {
     title: '',
     description: '',
     priority: '',
+    status: false
   };
 
   const [task, setTask] = useState(taskInit);
