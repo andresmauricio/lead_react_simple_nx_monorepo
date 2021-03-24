@@ -10,7 +10,6 @@ export default function App() {
 
   const addTask = (task) => {
     setTasks([...tasks, task]);
-    console.log(tasks);  
   };
   return (
     <Fragment>

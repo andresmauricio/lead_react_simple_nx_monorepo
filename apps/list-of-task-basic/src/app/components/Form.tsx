@@ -13,7 +13,6 @@ export default function Form({ addTask }) {
   const handlerForm = (e) => {
     addTask(task);
     e.preventDefault();
-    // console.log(task);
   };
 
   const handlerUpdateField = (e) => {
