@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-export default function Form() {
+export default function Form({ addTask }) {
   const taskInit = {
     title: '',
     description: '',
     priority: '',
   };
+
   const [task, setTask] = useState(taskInit);
+
   const handlerForm = (e) => {
+    addTask(task);
     e.preventDefault();
-    console.log(task);
+    // console.log(task);
   };
 
   const handlerUpdateField = (e) => {
