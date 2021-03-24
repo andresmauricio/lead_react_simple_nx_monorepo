@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default function Navbar() {
+export default function Navbar({taskCount}) {
   return (
     <Header>
       <Title>Task App</Title>
-      <Count>5</Count>
+      <Count>{taskCount}</Count>
     </Header>
   );
 }

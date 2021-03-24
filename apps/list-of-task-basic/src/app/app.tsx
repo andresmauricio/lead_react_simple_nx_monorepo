@@ -13,7 +13,7 @@ export default function App() {
   };
   return (
     <Fragment>
-      <Navabar />
+      <Navabar taskCount={tasks.length} />
       <Container>
         <Form addTask={addTask} />
         <ListTask listOfTasks={tasks} />
