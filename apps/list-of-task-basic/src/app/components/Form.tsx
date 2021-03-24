@@ -1,22 +1,48 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 export default function Form() {
+  const taskInit = {
+    title: '',
+    description: '',
+    priority: '',
+  };
+  const [task, setTask] = useState(taskInit);
+  const handlerForm = (e) => {
+    e.preventDefault();
+    console.log(task);
+  };
+
+  const handlerUpdateField = (e) => {
+    const { value, name } = e.target;
+    setTask({ ...task, [name]: value });
+  };
   return (
-    <FormContainer>
+    <FormContainer onSubmit={handlerForm}>
       <Title>Add Task</Title>
-      <Input type="text" autoComplete="off" placeholder="Title" name="title" />
+      <Input
+        type="text"
+        autoComplete="off"
+        placeholder="Title"
+        name="title"
+        value={task.title}
+        onChange={(e) => handlerUpdateField(e)}
+      />
       <Input
         type="text"
         autoComplete="off"
         placeholder="Description"
         name="description"
+        value={task.description}
+        onChange={(e) => handlerUpdateField(e)}
       />
       <Input
         type="text"
         autoComplete="off"
         placeholder="Priority"
         name="priority"
+        value={task.priority}
+        onChange={(e) => handlerUpdateField(e)}
       />
       <Button type="submit">Send</Button>
     </FormContainer>
