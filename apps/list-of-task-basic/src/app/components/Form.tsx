@@ -27,6 +27,7 @@ export default function Form() {
         name="title"
         value={task.title}
         onChange={(e) => handlerUpdateField(e)}
+        required
       />
       <Input
         type="text"
@@ -35,6 +36,7 @@ export default function Form() {
         name="description"
         value={task.description}
         onChange={(e) => handlerUpdateField(e)}
+        required
       />
       <Input
         type="text"
@@ -43,6 +45,7 @@ export default function Form() {
         name="priority"
         value={task.priority}
         onChange={(e) => handlerUpdateField(e)}
+        required
       />
       <Button type="submit">Send</Button>
     </FormContainer>
