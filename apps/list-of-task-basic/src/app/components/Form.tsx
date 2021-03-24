@@ -6,13 +6,14 @@ export default function Form({ addTask }) {
     title: '',
     description: '',
     priority: '',
-    status: false
+    status: false,
+    id: null,
   };
 
   const [task, setTask] = useState(taskInit);
 
   const handlerForm = (e) => {
-    addTask(task);
+    addTask({ ...task, id: new Date().getTime() });
     e.preventDefault();
   };
 

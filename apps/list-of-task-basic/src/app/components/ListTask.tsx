@@ -10,7 +10,7 @@ export default function ListTask({ listOfTasks }) {
   return (
     <GridTask>
       {tasks.map((task) => (
-        <Task props={task} key={task.name} />
+        <Task props={task} key={task.id} />
       ))}
     </GridTask>
   );
