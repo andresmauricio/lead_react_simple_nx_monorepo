@@ -29,6 +29,13 @@
     "list-of-task-basic-e2e": {
       "tags": [],
       "implicitDependencies": ["list-of-task-basic"]
+    },
+    "open-library-basic-api": {
+      "tags": []
+    },
+    "open-library-basic-api-e2e": {
+      "tags": [],
+      "implicitDependencies": ["open-library-basic-api"]
     }
   }
 }
