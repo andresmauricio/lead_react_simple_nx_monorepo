@@ -19,7 +19,7 @@ export function App() {
   return (
     <>
       <GlobalStyle />
-      <Table />
+      <Table books={openLibrary} />
     </>
   );
 }
