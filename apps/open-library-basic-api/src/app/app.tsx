@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Navbar from './components/Navbar';
 import Table from './components/Table';
 import GlobalStyle from './GlobalStyle';
 
@@ -19,6 +20,7 @@ export function App() {
   return (
     <>
       <GlobalStyle />
+      <Navbar />
       <Table books={openLibrary} />
     </>
   );
