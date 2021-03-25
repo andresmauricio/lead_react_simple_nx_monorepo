@@ -2,7 +2,7 @@ import React from 'react';
 
 function Table({ books }) {
   return (
-    <table>
+    <table className="table">
       <thead>
         <tr>
           <th>Id</th>
