@@ -34,4 +34,5 @@ export default App;
 
 export const Container = styled.div`
   padding: 30px;
+  margin-top: 20px;
 `;
