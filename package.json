@@ -25,7 +25,8 @@
     "dep-graph": "nx dep-graph",
     "help": "nx help",
     "start-react-basic-list-task": "nx serve list-of-task-basic",
-    "start-open-library-basic": "nx serve open-library-basic-api"
+    "start-open-library-basic": "nx serve open-library-basic-api",
+    "start-app-badges": "nx serve badges"
   },
   "private": true,
   "dependencies": {
