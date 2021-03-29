@@ -1,14 +1,14 @@
 import React from 'react';
-
 import styled from 'styled-components';
-
-import { ReactComponent as Logo } from './logo.svg';
-import star from './star.svg';
-
 import { Route, Link } from 'react-router-dom';
+import Navbar from './components/Navbar';
 
 export function App() {
-  return <h2>He</h2>
+  return (
+    <>
+      <Navbar />
+    </>
+  );
 }
 
 export default App;
