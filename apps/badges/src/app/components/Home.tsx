@@ -1,12 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
+import Logo from '../../assets/astronaut.png'
 
 function Home() {
   return (
     <Main>
-      <h1>Hello</h1>
-      <h1>Hello</h1>
-    </Main>
+      <section>
+        <img src={Logo} alt=""/>
+        <p>Badge Management System</p>
+        <button>Start</button>
+      </section>
+      <section>
+        <img src={Logo} alt=""/>
+        <p>Badge Management System</p>
+        <button>Start</button>
+      </section>    </Main>
   );
 }
 
