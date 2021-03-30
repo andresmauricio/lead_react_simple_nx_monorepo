@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Austronauta from '../../assets/astronauta.png';
 import AustronautaWomen from '../../assets/astronauta-women.png';
 import Navbar from '../components/Navbar';
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
@@ -14,7 +15,9 @@ function Home() {
           <Title>
             Badge Management <br /> System
           </Title>
-          <Button>Start</Button>
+          <Link to="/badges">
+            <Button>Start</Button>
+          </Link>
         </section>
         <section>
           <ImgAutronaut src={Austronauta} alt="" />
