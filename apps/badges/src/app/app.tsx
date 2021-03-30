@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
-import Navbar from './components/Navbar';
+import Badges from './pages/Badges';
 import Home from './pages/Home';
 
 export function App() {
@@ -8,6 +8,7 @@ export function App() {
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route exact path="/badges" component={Badges} />
       </Switch>
     </BrowserRouter>
   );
