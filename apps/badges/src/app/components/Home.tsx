@@ -1,18 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
-import Logo from '../../assets/astronaut.png';
+import Star from '../../assets/star.png';
 import Austronauta from '../../assets/astronauta.png';
+import AustronautaWomen from '../../assets/astronauta-women.png';
 
 function Home() {
   return (
     <Main>
       <section>
-        <img src={Logo} alt="" />
-        <p>Badge Management System</p>
-        <button>Start</button>
+        <ImgBrand src={AustronautaWomen} alt="" />
+        <Title>
+          Badge Management <br /> System
+        </Title>
+        <Button>Start</Button>
       </section>
       <section>
-        <img src={Austronauta} alt="" />
+        <ImgAutronaut src={Austronauta} alt="" />
       </section>
     </Main>
   );
@@ -27,5 +30,30 @@ const Main = styled.main`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 100px;
+`;
+
+const ImgAutronaut = styled.img`
+  height: 400px;
+`;
+
+const ImgBrand = styled.img`
+  height: 150px;
+`;
+
+const Title = styled.h2`
+  color: white;
+  font-size: 32px;
+  line-height: 30px;
+  font-weight: bold;
+  margin: 35px 0;
+`;
+
+const Button = styled.button`
+  width: 130px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  background-color: #7dcd40;
+  color: white;
 `;
