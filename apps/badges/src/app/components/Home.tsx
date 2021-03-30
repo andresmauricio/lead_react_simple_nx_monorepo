@@ -27,6 +27,8 @@ const Main = styled.main`
   width: 100%;
   height: calc(100vh - 60px);
   background-color: #1b1b25;
+  background-image: url('../../assets/stars.svg');
+  background-repeat: repeat;
   display: flex;
   justify-content: center;
   align-items: center;
