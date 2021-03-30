@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Star from '../../assets/star.png';
 import Austronauta from '../../assets/astronauta.png';
 import AustronautaWomen from '../../assets/astronauta-women.png';
 
@@ -32,7 +31,7 @@ const Main = styled.main`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 100px;
+  gap: 150px;
 `;
 
 const ImgAutronaut = styled.img`
