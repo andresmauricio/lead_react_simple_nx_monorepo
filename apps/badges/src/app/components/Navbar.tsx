@@ -6,6 +6,7 @@ function Navbar() {
   return (
     <Header>
       <Img src={Logo} alt="Logo" />
+      Badges Conf
     </Header>
   );
 }
