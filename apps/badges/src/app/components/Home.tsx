@@ -2,21 +2,25 @@ import React from 'react';
 import styled from 'styled-components';
 import Austronauta from '../../assets/astronauta.png';
 import AustronautaWomen from '../../assets/astronauta-women.png';
+import Navbar from '../components/Navbar';
 
 function Home() {
   return (
-    <Main>
-      <section>
-        <ImgBrand src={AustronautaWomen} alt="" />
-        <Title>
-          Badge Management <br /> System
-        </Title>
-        <Button>Start</Button>
-      </section>
-      <section>
-        <ImgAutronaut src={Austronauta} alt="" />
-      </section>
-    </Main>
+    <>
+      <Navbar />
+      <Main>
+        <section>
+          <ImgBrand src={AustronautaWomen} alt="" />
+          <Title>
+            Badge Management <br /> System
+          </Title>
+          <Button>Start</Button>
+        </section>
+        <section>
+          <ImgAutronaut src={Austronauta} alt="" />
+        </section>
+      </Main>
+    </>
   );
 }
 
