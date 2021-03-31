@@ -61,8 +61,10 @@ const Article = styled.article`
   background-color: white;
   display: flex;
   align-items: center;
-  margin: 20px auto;
   padding: 0 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 23%);
 `;
 
 const ImgProfile = styled.img`
@@ -75,4 +77,8 @@ const ImgProfile = styled.img`
 const ContainerBadges = styled.section`
   width: 100%;
   background-color: #eaeaec;
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
