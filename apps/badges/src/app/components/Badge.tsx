@@ -1,17 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
 
-function Badge() {
+function Badge(props) {
+  const { person } = props;
+  console.log(person);
+
   return (
     <Article>
       <ImgProfile
-        src="https://images.unsplash.com/photo-1505999407077-7937810b98ae?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=888&q=80"
-        alt="Image profile"
+        src={person.image}
+        alt={person.name}
       />
       <ContainerPersonalInfo>
-        <Title>Paola Vargas</Title>
-        <Twitter>@pvargas</Twitter>
-        <Profesion>Contador publico</Profesion>
+        <Title>{person.name}</Title>
+        <Twitter>{person.twitter}</Twitter>
+        <Profesion>{person.profesion}</Profesion>
       </ContainerPersonalInfo>
     </Article>
   );
