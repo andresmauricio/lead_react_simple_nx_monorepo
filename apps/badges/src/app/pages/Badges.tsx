@@ -3,6 +3,8 @@ import Navbar from '../components/Navbar';
 import Austronauta from '../../assets/astronauta.png';
 import styled from 'styled-components';
 import Badge from '../components/Badge';
+import { Link } from 'react-router-dom';
+
 
 function Badges() {
   const persons = [
@@ -29,11 +31,16 @@ function Badges() {
       <Section>
         <Img src={Austronauta} alt="" />
       </Section>
-      <ContainerBadges>
-        {persons.map((person) => (
-          <Badge person={person} key={person.id} />
-        ))}
-      </ContainerBadges>
+      <BackDrop>
+        <ContainerBadges>
+          <Link to='/add-badge'>
+            <Button>New Badge</Button>
+          </Link>
+          {persons.map((person) => (
+            <Badge person={person} key={person.id} />
+          ))}
+        </ContainerBadges>
+      </BackDrop>
     </>
   );
 }
@@ -55,11 +62,28 @@ const Img = styled.img`
   height: 180px;
 `;
 
-const ContainerBadges = styled.section`
-  width: 100%;
+const BackDrop = styled.main`
+  width: 100%auto;
   background-color: #eaeaec;
+`;
+
+const ContainerBadges = styled.section`
+  width: 60%;
+  margin: 0 auto;
   padding-top: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
+`;
+
+const Button = styled.button`
+  width: 130px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  background-color: #7dcd40;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  margin-left: auto;
 `;
