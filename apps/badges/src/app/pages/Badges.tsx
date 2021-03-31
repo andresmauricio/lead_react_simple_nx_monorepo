@@ -16,22 +16,22 @@ function Badges() {
             src="https://images.unsplash.com/photo-1505999407077-7937810b98ae?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=888&q=80"
             alt="Image profile"
           />
-          <div>
-            <h3>Paola Vargas</h3>
-            <span>@pvargas</span>
-            <p>Contador publico</p>
-          </div>
+          <ContainerPersonalInfo>
+            <Title>Paola Vargas</Title>
+            <Twitter>@pvargas</Twitter>
+            <Profesion>Contador publico</Profesion>
+          </ContainerPersonalInfo>
         </Article>
         <Article>
           <ImgProfile
             src="https://images.unsplash.com/photo-1505999407077-7937810b98ae?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=888&q=80"
             alt="Image profile"
           />
-          <div>
+          <ContainerPersonalInfo>
             <h3>Paola Vargas</h3>
             <span>@pvargas</span>
-            <p>Contador publico</p>
-          </div>
+            <Profesion>Contador publico</Profesion>
+          </ContainerPersonalInfo>
         </Article>
       </ContainerBadges>
     </>
@@ -81,4 +81,27 @@ const ContainerBadges = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+`;
+
+const Title = styled.h3`
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 0px;
+`;
+
+const Twitter = styled.span`
+  font-weight: 300;
+  font-size: 14px;
+  font-style: italic;
+  margin-bottom: 0px;
+`;
+
+const Profesion = styled.p`
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 0px;
+`;
+
+const ContainerPersonalInfo = styled.div`
+  margin-left: 24px;
 `;
