@@ -3,14 +3,9 @@ import styled from 'styled-components';
 
 function Badge(props) {
   const { person } = props;
-  console.log(person);
-
   return (
     <Article>
-      <ImgProfile
-        src={person.image}
-        alt={person.name}
-      />
+      <ImgProfile src={person.image} alt={person.name} />
       <ContainerPersonalInfo>
         <Title>{person.name}</Title>
         <Twitter>{person.twitter}</Twitter>

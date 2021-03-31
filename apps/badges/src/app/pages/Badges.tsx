@@ -7,6 +7,7 @@ import Badge from '../components/Badge';
 function Badges() {
   const persons = [
     {
+      id: 1,
       name: 'Paola Vargas',
       twitter: '@pvargas',
       profesion: 'Chif Officer Manager',
@@ -14,6 +15,7 @@ function Badges() {
         'https://images.unsplash.com/photo-1505999407077-7937810b98ae?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=888&q=80',
     },
     {
+      id: 2,
       name: 'Jhon Doe',
       twitter: '@doe',
       profesion: 'Center Officer Organizer',
@@ -28,7 +30,9 @@ function Badges() {
         <Img src={Austronauta} alt="" />
       </Section>
       <ContainerBadges>
-        <Badge person={persons[0]} />
+        {persons.map((person) => (
+          <Badge person={person} key={person.id} />
+        ))}
       </ContainerBadges>
     </>
   );
