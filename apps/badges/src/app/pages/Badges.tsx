@@ -9,10 +9,6 @@ import { persons as listOfPersons } from '../db/persons';
 function Badges() {
   let persons = listOfPersons;
 
-  const addPerson = (person) => {
-    console.log(person);
-    persons.push(person);
-  };
   return (
     <>
       <Navbar />

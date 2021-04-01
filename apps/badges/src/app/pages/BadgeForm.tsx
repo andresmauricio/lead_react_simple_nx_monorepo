@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import Navbar from '../components/Navbar';
 import Austronauta from '../../assets/astronauta.png';
+import { persons as listOfPersons } from '../db/persons';
 
 function BadgeForm() {
   const person = {
@@ -18,7 +19,8 @@ function BadgeForm() {
 
   const handlerForm = (e) => {
     e.preventDefault();
-    const personOfbadge = { ...personForm, image };
+    const personOfbadge = { ...personForm, image, id: new Date().getTime() };
+    listOfPersons.unshift(personOfbadge);
   };
 
   const image =
