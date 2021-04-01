@@ -22,9 +22,12 @@ function BadgeForm() {
           <ContainerImage>
             <Img src={Austronauta} alt="" />
           </ContainerImage>
-          <p>Name: {personForm.name}</p>
+          <ContainerName>
+            <Img src={Austronauta} alt="" />
+            <Name>{personForm.name}</Name>
+          </ContainerName>
+          <Twitter>{personForm.twitter}</Twitter>
           <p>Profesion: {personForm.profesion}</p>
-          <p>Twitter: {personForm.twitter}</p>
         </Section>
         <form>
           <div className="form-group">
@@ -105,4 +108,31 @@ const ContainerImage = styled.div`
 
 const Img = styled.img`
   height: 70px;
+`;
+
+const ContainerName = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+`;
+
+const Name = styled.h2`
+  flex: 1;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 26px;
+  line-height: 20px;
+  letter-spacing: -1px;
+`;
+
+const Twitter = styled.div`
+  background-color: #eaeaec;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
 `;
