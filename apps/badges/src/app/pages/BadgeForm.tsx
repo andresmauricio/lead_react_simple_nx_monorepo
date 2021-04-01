@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Navbar from '../components/Navbar';
 import Austronauta from '../../assets/astronauta.png';
 import { persons as listOfPersons } from '../db/persons';
+import { useHistory } from 'react-router-dom';
 
 function BadgeForm() {
   const person = {
@@ -11,6 +12,8 @@ function BadgeForm() {
     twitter: '@andresm',
   };
   const [personForm, setPerson] = useState(person);
+
+  const history = useHistory();
 
   const handlerChange = (e) => {
     const { value, name } = e.target;
@@ -21,6 +24,7 @@ function BadgeForm() {
     e.preventDefault();
     const personOfbadge = { ...personForm, image, id: new Date().getTime() };
     listOfPersons.unshift(personOfbadge);
+    history.push('/badges');
   };
 
   const image =
