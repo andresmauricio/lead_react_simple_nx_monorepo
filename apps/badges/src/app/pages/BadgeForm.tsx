@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import Navbar from '../components/Navbar';
+import Austronauta from '../../assets/astronauta.png';
 
 function BadgeForm() {
   const person = {
-    name: '',
-    profesion: '',
-    twitter: '',
+    name: 'Andres Mauricio Acelas',
+    profesion: 'Frontend Enginner',
+    twitter: '@andresm',
   };
   const [personForm, setPerson] = useState(person);
   const handlerChange = (e) => {
@@ -17,11 +18,14 @@ function BadgeForm() {
     <div>
       <Navbar />
       <Container>
-        <section>
+        <Section>
+          <ContainerImage>
+            <Img src={Austronauta} alt="" />
+          </ContainerImage>
           <p>Name: {personForm.name}</p>
           <p>Profesion: {personForm.profesion}</p>
           <p>Twitter: {personForm.twitter}</p>
-        </section>
+        </Section>
         <form>
           <div className="form-group">
             <label htmlFor="fullName">Full Name</label>
@@ -77,4 +81,28 @@ const Container = styled.main`
   justify-content: center;
   align-items: center;
   gap: 150px;
+  background-color: #eaeaec;
+`;
+
+const Section = styled.section`
+  background-color: white;
+  width: 400px;
+  height: 350px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 23%);
+`;
+
+const ContainerImage = styled.div`
+  background-color: #1b1b25;
+  padding: 5px;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Img = styled.img`
+  height: 70px;
 `;
