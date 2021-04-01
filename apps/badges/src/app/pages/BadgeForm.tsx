@@ -8,7 +8,7 @@ import { useHistory } from 'react-router-dom';
 function BadgeForm() {
   const person = {
     name: 'Andres Mauricio Acelas',
-    profesion: 'Frontend Enginner',
+    profesion: 'Frontend Engineer',
     twitter: '@andresm',
   };
   const [personForm, setPerson] = useState(person);
