@@ -10,10 +10,17 @@ function BadgeForm() {
     twitter: '@andresm',
   };
   const [personForm, setPerson] = useState(person);
+
   const handlerChange = (e) => {
     const { value, name } = e.target;
     setPerson({ ...personForm, [name]: value });
   };
+
+  const handlerForm = (e) => {
+    e.preventDefault()
+    console.log(personForm  )
+  }
+
   const image = 'https://images.unsplash.com/photo-1496345875659-11f7dd282d1d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjJ8fHBlcnNvbiUyMG1lbnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60';
   return (
     <div>
@@ -30,7 +37,7 @@ function BadgeForm() {
           <Twitter>{personForm.twitter}</Twitter>
           <Profesion>{personForm.profesion}</Profesion>
         </Section>
-        <Form>
+        <Form onSubmit={(e) => handlerForm(e)}>
           <div className="form-group">
             <label htmlFor="fullName">Full Name</label>
             <input
