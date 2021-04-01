@@ -30,7 +30,7 @@ function BadgeForm() {
           <Twitter>{personForm.twitter}</Twitter>
           <Profesion>{personForm.profesion}</Profesion>
         </Section>
-        <form>
+        <Form>
           <div className="form-group">
             <label htmlFor="fullName">Full Name</label>
             <input
@@ -70,7 +70,7 @@ function BadgeForm() {
           <button type="submit" className="btn btn-success btn-block">
             Send
           </button>
-        </form>
+        </Form>
       </Container>
     </div>
   );
@@ -82,9 +82,9 @@ const Container = styled.main`
   width: 100%;
   height: calc(100vh - 60px);
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  gap: 150px;
+  gap: 20px;
   background-color: #eaeaec;
 `;
 
@@ -94,6 +94,16 @@ const Section = styled.section`
   height: 350px;
   border-radius: 15px;
   overflow: hidden;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 23%);
+`;
+
+const Form = styled.form`
+  background-color: white;
+  width: 400px;
+  height: 350px;
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 30px;
   box-shadow: 0 2px 4px 0 rgb(0 0 0 / 23%);
 `;
 
