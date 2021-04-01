@@ -4,6 +4,8 @@ import Navbar from '../components/Navbar';
 import Austronauta from '../../assets/astronauta.png';
 import { persons as listOfPersons } from '../db/persons';
 import { useHistory } from 'react-router-dom';
+import { v4 as uuidv4 } from 'uuid';
+
 
 function BadgeForm() {
   const person = {
@@ -22,8 +24,8 @@ function BadgeForm() {
 
   const handlerForm = (e) => {
     e.preventDefault();
-    const personOfbadge = { ...personForm, image, id: new Date().getTime() };
-    listOfPersons.unshift(personOfbadge);
+    const personOfbadge = { ...personForm, image, id: uuidv4()};    
+    listOfPersons.unshift(personOfbadge);    
     history.push('/badges');
   };
 
