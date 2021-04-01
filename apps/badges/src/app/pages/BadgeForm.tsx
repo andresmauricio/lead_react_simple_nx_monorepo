@@ -17,11 +17,12 @@ function BadgeForm() {
   };
 
   const handlerForm = (e) => {
-    e.preventDefault()
-    console.log(personForm  )
-  }
+    e.preventDefault();
+    const personOfbadge = { ...personForm, image };
+  };
 
-  const image = 'https://images.unsplash.com/photo-1496345875659-11f7dd282d1d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjJ8fHBlcnNvbiUyMG1lbnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60';
+  const image =
+    'https://images.unsplash.com/photo-1496345875659-11f7dd282d1d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjJ8fHBlcnNvbiUyMG1lbnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60';
   return (
     <div>
       <Navbar />
@@ -167,7 +168,7 @@ const Profesion = styled.h4`
   font-weight: bold;
   text-transform: capitalize;
   letter-spacing: -1px;
-  text-align: center; 
-  opacity: .8;
+  text-align: center;
+  opacity: 0.8;
   margin-top: 20px;
 `;
