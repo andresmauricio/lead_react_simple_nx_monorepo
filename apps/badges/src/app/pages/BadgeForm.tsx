@@ -14,6 +14,7 @@ function BadgeForm() {
     const { value, name } = e.target;
     setPerson({ ...personForm, [name]: value });
   };
+  const image = 'https://images.unsplash.com/photo-1496345875659-11f7dd282d1d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjJ8fHBlcnNvbiUyMG1lbnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60';
   return (
     <div>
       <Navbar />
@@ -23,11 +24,11 @@ function BadgeForm() {
             <Img src={Austronauta} alt="" />
           </ContainerImage>
           <ContainerName>
-            <Img src={Austronauta} alt="" />
+            <ImgPerson src={image} alt="" />
             <Name>{personForm.name}</Name>
           </ContainerName>
           <Twitter>{personForm.twitter}</Twitter>
-          <p>Profesion: {personForm.profesion}</p>
+          <Profesion>{personForm.profesion}</Profesion>
         </Section>
         <form>
           <div className="form-group">
@@ -110,6 +111,14 @@ const Img = styled.img`
   height: 70px;
 `;
 
+const ImgPerson = styled.img`
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 30px;
+`;
+
 const ContainerName = styled.div`
   display: flex;
   width: 100%;
@@ -135,4 +144,13 @@ const Twitter = styled.div`
   text-align: center;
   font-style: italic;
   font-weight: bold;
+`;
+
+const Profesion = styled.h4`
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: -1px;
+  text-align: center; 
+  opacity: .8;
+  margin-top: 20px;
 `;
